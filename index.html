@@ -1,0 +1,53 @@
+
+<link rel="stylesheet" href="obalka.css">
+<body>
+    <div class="wrapper">
+      <div class="lid one"></div>
+      <div class="lid two"></div>
+      <div class="envelope"></div>
+      <div class="letter">
+        <h1>Šťastný Mezinárodní den žen!</h1>
+            <p class="poem">Žena je jako květina, co v srdci světlo má,</p>
+            <p class="poem">síla v jejích rukou, co vždy zázraky dělá.</p>
+            <h1>💕</h1>
+            <h1>(♥ω♥*)</h1>
+      </div>
+    </div>
+
+    <div class="hidden">
+        <button class="heart"></button>
+        <div class="beat"></div>
+      </div>
+  </body>
+
+      <!-- Krokodýl s vlajkou -->
+      <div id="crocodile" class="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/800px-Flag_of_the_United_States.svg.png" alt="American Flag" id="flag">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/1200px-Flag_of_the_Czech_Republic.svg.png" alt="American Flag" id="flag2">
+        <img src="crocodile.png" alt="Crocodile" id="crocodile">
+    </div>
+
+    <script>
+      function applyStyles() {
+        const screenWidth = window.innerWidth;
+        
+        if (screenWidth <= 800) {
+          // Retrieve stored settings
+          document.querySelector("#flag").style.right = localStorage.getItem("flagPosition");
+          document.querySelector("#flag2").style.right = localStorage.getItem("flagPosition2");
+          
+        }
+      }
+
+      // Save the data to localStorage for mobile use
+      localStorage.setItem("flagPosition", "12px");
+      localStorage.setItem("flagPosition2", "120px");
+      
+
+      // Listen to window resize and apply styles
+      window.addEventListener("resize", applyStyles);
+
+      // Initial call
+      applyStyles();
+
+    </script>

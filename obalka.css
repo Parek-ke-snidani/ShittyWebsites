@@ -82,6 +82,7 @@ body {
 .letter h1 {
     text-align: center;
     font-size: 16px;
+    margin-top: 2px;
 }
 
 .letter p {
@@ -199,17 +200,29 @@ body {
     height: auto;
     animation: flagWave 2s infinite;
     position: fixed;
-    right: 35%;
+    right: 500px;
     top: 65%;
 }
 #flag2 {
     width: 200px;
     position: fixed;
-    left: 35%;
+    left: 500px;
     top: 65%;
     height: auto;
     animation: flagWave2 2.2s infinite;}
 
+/* Media query for mobile devices (max-width: 768px) */
+@media screen and (max-width: 800px) {
+    #flag {
+      position: relative;
+      right: 12px; /* Adjust this value as needed for mobile */
+    }
+    #flag2{
+    position: relative;
+    left: 12px;
+    }
+    
+}
 #crocodile {
     width: 250px;
     height: auto;
